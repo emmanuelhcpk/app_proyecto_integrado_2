@@ -1,0 +1,27 @@
+.toolbar-background{
+  background-color: $header-bg !important;
+}
+.item-input{
+  background: none !important;
+  color: map-get($colors,light) !important;
+}
+.toolbar-title{
+  color: map-get($colors,light) !important;
+}
+.bar-buttons{
+  color:map-get($colors,light) !important;
+}
+.text-center{
+  text-align: center;
+}
+.item-md{
+  color: #000 !important;
+  background: rgba(255, 255, 255, 0.7)!important;
+}
+.label{
+  color: #5e5e5e !important;
+}
+.text-add-code{
+  font-size: 1.2em;
+  font-weight: bold;
+}

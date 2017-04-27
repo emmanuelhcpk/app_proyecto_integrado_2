@@ -1,0 +1,12 @@
+page-user-detail {
+    .user-detail-img{
+        width: 30%;
+        display: block;
+        margin: 0 auto;
+    }
+    .user-detail-view{
+        color:$white !important;
+        background: url('../assets/bg/bg1.jpg') no-repeat center center fixed;
+        background-size:$main-background-size; 
+    }
+}

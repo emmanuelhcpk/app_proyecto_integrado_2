@@ -1,0 +1,18 @@
+page-profile {
+    .logo-profile{
+        width: 40%;
+        display: block;
+        margin: 40px auto;
+    }
+    .login-view{
+        color:$white !important;
+        background: $main-background;
+        background-size:$main-background-size; 
+    }
+    .profile-view{
+        color:$white !important;
+        background: url('../assets/bg/bg1.jpg') no-repeat center center fixed;
+        background-size:$main-background-size; 
+    }
+}
+

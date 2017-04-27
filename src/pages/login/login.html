@@ -1,0 +1,49 @@
+<loading-modal></loading-modal>
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Servicios</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="login-view">
+
+    <div>
+        <form (ngSubmit)="login()">
+            <div style="text-align: center;">
+                <h1>App de servicios</h1>
+            </div>
+            <img src="" class="logo-login" alt="">
+            <ion-item>
+                <ion-label>Email</ion-label>
+                <ion-input type="email" [(ngModel)]="user.email" name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Password</ion-label>
+                <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
+            </ion-item>
+            <br>
+            <button ion-button type="submit" class="btn-success" block>Ingresar</button>
+            <div *ngIf="showError" class="alert-error">
+                Oops hay un problema con su usuario o su contraseña.
+            </div>
+        </form>
+        <br>
+        <br>
+        <button ion-button (click)="oauthGoogle()" class="btn-google" block>
+            <div class="btn-icon btn-icon-google"></div>
+            Ingresar usando Google
+        </button>
+        <button ion-button (click)="oauthFacebook()" class="btn-facebook" block>
+            <div class="btn-icon btn-icon-facebook"></div>
+            Ingresar usando Facebook
+        </button>
+        <div class="fb-login-button" data-max-rows="2" data-size="xlarge" data-show-faces="false"
+             data-auto-logout-link="false"></div>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+
+    </div>
+</ion-content>

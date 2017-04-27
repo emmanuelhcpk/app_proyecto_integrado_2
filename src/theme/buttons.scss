@@ -1,0 +1,9 @@
+.btn-success{
+  background-color: map-get($button-colors,success) !important;
+}
+.btn-info{
+  background-color: map-get($button-colors,gray) !important;
+}
+.btn-blue{
+  background-color: map-get($button-colors,blue) !important;
+}

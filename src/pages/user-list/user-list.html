@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lista de contratistas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="user-list-view">
+  <ion-list>
+    <button ion-item *ngFor="let user of users" (click)="selectUser(user.id)">
+      <ion-icon ios="md-person" md="md-person" item-left></ion-icon>
+      {{user.name}}
+      <div class="item-note" item-right>
+      </div>
+    </button>
+  </ion-list>
+</ion-content>

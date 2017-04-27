@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Detalle del contratista</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="user-detail-view">
+
+  <img src="../assets/logos/user.png" alt="" class="user-detail-img">
+
+  <h3>{{user.name}}</h3>
+  <p>{{user.description}}</p>
+  <ion-item>
+      <ion-label>Dirección del servicio</ion-label>
+      <ion-input type="text" name="name" [(ngModel)]="serviceAddress"></ion-input>
+    </ion-item>
+  <button ion-button class="btn-blue" (click)="hire()" block>Contratar</button>
+</ion-content>

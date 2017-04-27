@@ -1,0 +1,13 @@
+.alert-success{
+  background-color: map-get($button-colors,success) !important;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom:10px; 
+  margin-top:10px; 
+}
+.alert-error{
+  background: $error-bg;
+  color: $error-font;
+  padding: 4px;
+  border-radius: 6px;
+}

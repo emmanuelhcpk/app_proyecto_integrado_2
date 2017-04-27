@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Solicitudes de trabajo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="categories-view">
+  <ion-list>
+    <button ion-item *ngFor="let category of categories | keys" (click)="selectCategory(category.key)">
+      <ion-icon ios="md-person" md="md-person" item-left></ion-icon>
+      {{category.value.es}}
+      <div class="item-note" item-right>
+      </div>
+    </button>
+  </ion-list>
+</ion-content>

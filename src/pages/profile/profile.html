@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="profile-view">
+  <form (ngSubmit)="edit()">
+    <!--img src="./assets/logos/logo_white.png" class="logo-signup" alt=""-->
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input type="text" name="name" [(ngModel)]="user.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select>
+        <ion-label>Oficio</ion-label>
+        <ion-option selected="true">--Seleccione un oficio--</ion-option>
+        <ion-option value="f" >Plomeria</ion-option>
+        <ion-option value="m">Pintor</ion-option>
+        <ion-option value="m">Aseo</ion-option>
+        <ion-option value="m">Albañileria</ion-option>
+        <ion-option value="m">Carpinteria</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Telefono</ion-label>
+      <ion-input type="number" name="phone" [(ngModel)]="user.phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email" name="email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dirección</ion-label>
+      <ion-input type="text" name="address" [(ngModel)]="user.address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ciudad</ion-label>
+      <ion-input type="text" name="city" [(ngModel)]="user.city"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>País</ion-label>
+      <ion-input type="text" name="country" [(ngModel)]="user.country"></ion-input>
+    </ion-item>
+    <ion-item> 
+      <ion-label>Password</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <ion-item> 
+      <ion-label>Verificar Password</ion-label>
+      <ion-input type="password" name="password2" [(ngModel)]="user.password2"></ion-input>
+    </ion-item>
+    <br>
+    <button ion-button type="submit" class="btn-success" block>Registrarse</button>
+    <div *ngIf="showError" class="alert-error">
+      {{errorMsg}}
+    </div>
+  </form>
+</ion-content>
